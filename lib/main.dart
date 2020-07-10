@@ -133,7 +133,12 @@ class TaskScreen extends StatelessWidget {
   }
 }
 
-class TaskList extends StatelessWidget {
+class TaskList extends StatefulWidget {
+  @override
+  _TaskListState createState() => _TaskListState();
+}
+
+class _TaskListState extends State<TaskList> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -154,14 +159,41 @@ class TaskList extends StatelessWidget {
   }
 }
 
-class TaskTile extends StatelessWidget {
+class TaskTile extends StatefulWidget {
+  @override
+  _TaskTileState createState() => _TaskTileState();
+}
+
+class _TaskTileState extends State<TaskTile> {
+  bool isChecked=false;
+  void checkboxCallback (bool checkBoxstate){
+    setState(() {
+      isChecked=checkBoxstate;
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('this is a check'),
-      trailing: Checkbox(
-        value: false,
-      ),
+      title: Text('this is a check',style: TextStyle(fontWeight:FontWeight.w400,fontSize:17,decoration: isChecked? TextDecoration.lineThrough:null),),
+      trailing: taskCheckbox(checkeBoxstate: isChecked,toggleCheckbox:checkboxCallback ),
     );
   }
 }
+
+class taskCheckbox extends StatelessWidget {
+taskCheckbox({this.checkeBoxstate,this.toggleCheckbox});
+  final bool checkeBoxstate;
+  final Function toggleCheckbox;
+  @override
+  Widget build(BuildContext context) {
+    return Checkbox(
+      activeColor: Colors.pinkAccent,
+      value: checkeBoxstate,
+      onChanged:toggleCheckbox,
+    );
+  }
+}
+
+
