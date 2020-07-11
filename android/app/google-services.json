@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "803481871262",
+    "firebase_url": "https://ticktick-1b337.firebaseio.com",
+    "project_id": "ticktick-1b337",
+    "storage_bucket": "ticktick-1b337.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803481871262:android:0460b1028a77f32431ec8f",
+        "android_client_info": {
+          "package_name": "com.example.ticktick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803481871262-mmgasssqipq9jenl4ck97ikpjpdtltch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc32sSOW7N7AiCzhSoWpzVaFXgtODAUvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803481871262-mmgasssqipq9jenl4ck97ikpjpdtltch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
